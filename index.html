@@ -19,6 +19,26 @@
     <input id="input" autocomplete="off" /><button>Send!!</button>
   </form>
   <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDrfXPptz9MDwanCiLa-YzfsG5hmNAaJxI"></script>
+
+  <script>
+  function showMap(){
+  var map = null;
+window.onload = function() {
+	
+	var myOptions = {
+	
+		center: new google.maps.LatLng(40.600, -73.9120),
+		zoom: 13,
+		scrollwheel: false,
+		disableDefaultUI: true,
+	};
+  map = new google.maps.Map(document.getElementById("map"), myOptions);
+
+}
+}
+</script>
+  
   <script>
     let counter = 0;
 
@@ -51,5 +71,7 @@
       socket.auth.serverOffset = serverOffset;
     });
   </script>
+
+  
 </body>
 </html>
