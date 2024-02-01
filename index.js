@@ -45,6 +45,10 @@ if (cluster.isPrimary) {
     res.sendFile(join(__dirname, 'index.html'));
   });
 
+   app.get('/map', (req, res) => {
+    res.sendFile(join(__dirname, 'map.html'));
+  });
+
   io.on('connection', async (socket) => {
     socket.on('chat message', async (msg, clientOffset, callback) => {
       let result;
